@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+.loginForm{
+	padding: 10px;
+	border: 1px solid black;
+	border-radius:10px;  
+    float:left; 
+}
+.formheading{  
+    background-color:red;  
+    color:white;  
+    padding:4px;  
+    text-align:center;  
+}  
+.sub{  
+background-color:#ff0000;  
+padding: 7px 40px 7px 40px;  
+color:white;  
+font-weight:bold;  
+margin-left:70px;  
+border-radius:5px;  
+}  
+div.loginForm{
+	position: fixed;
+	top: 120px;
+	bottom: 120px;
+	right: 400px;
+	left: 400px;
+}
+
+table,td{
+	padding: 5px;
+	
+}
+div.reg{
+	position: fixed;
+	
+	top: 120px;
+	bottom: 120px;
+	right: 400px;
+	left: 400px;
+}
