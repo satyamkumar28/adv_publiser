@@ -1,4 +1,4 @@
-package com.model;
+package com.controller;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.controller.DbManger;
-import com.controller.RegUserInfo;
+import com.database.DbManger;
+import com.model.RegUserInfo;
 
 /**
  * Servlet implementation class Register
@@ -32,27 +32,28 @@ public class Register extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		/*
+		
 		String advId = request.getParameter("Id");
-		String  advname= request.getParameter("Name");
+		String  advName= request.getParameter("Name");
 		String advPassword=request.getParameter("Password");
 		String advAdd= request.getParameter("Address");
 		String advQuestion = request.getParameter("Question");
 		String advAns=request.getParameter("Answer");
 		String advContact=request.getParameter("Phone");
 		 
-		RegUserInfo user = new RegUserInfo();
-		RegUserInfo info;
-		*/
+		
 		String name = request.getParameter("Name");
-		RegUserInfo info =null;
-		info = DbManger.getInfo(name);
-		System.out.println("infoFound");
-   	 if(!(info.equals(null))){
-   		request.setAttribute("Uinfo",info);
-   		RequestDispatcher rd=request.getRequestDispatcher("/AdvertiserPanel/html/AdvLogin.html");
-   		rd.forward(request,response);
-	}
+		RegUserInfo info = new RegUserInfo(advName,advId,advPassword,advAdd,advContact,advQuestion,advAns);
+		
+		if(DbManger.registerAdvertiser(info))
+		{
+			System.out.println("sucessfully ");
+			RequestDispatcher rd=request.getRequestDispatcher("AdvLogin.html");
+	   		rd.forward(request,response);
+		}
+	
+   	
+	
 
 	}
 }

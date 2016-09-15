@@ -1,4 +1,4 @@
-package com.controller;
+package com.model;
 
 public class RegUserInfo {
 	private String advName;
@@ -13,6 +13,18 @@ public class RegUserInfo {
 	 */
 	public String getAdvName() {
 		return advName;
+	}
+	public RegUserInfo(String advName, String advId, String advPassword,
+			String advAddress, String advContact, String advQuestion,
+			String advAns) {
+		super();
+		this.advName = advName;
+		this.advId = advId;
+		this.advPassword = advPassword;
+		this.advAddress = advAddress;
+		this.advContact = advContact;
+		this.advQuestion = advQuestion;
+		this.advAns = advAns;
 	}
 	/**
 	 * @param advName the advName to set
