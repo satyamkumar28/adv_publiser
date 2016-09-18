@@ -39,3 +39,11 @@ div.reg{
 	right: 400px;
 	left: 400px;
 }
+div.adv{
+	position: fixed;
+	
+	top: 120px;
+	bottom: 120px;
+	right: 400px;
+	left: 400px;
+}

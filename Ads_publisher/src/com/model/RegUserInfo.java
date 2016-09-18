@@ -11,9 +11,7 @@ public class RegUserInfo {
 	/**
 	 * @return the advName
 	 */
-	public String getAdvName() {
-		return advName;
-	}
+	
 	public RegUserInfo(String advName, String advId, String advPassword,
 			String advAddress, String advContact, String advQuestion,
 			String advAns) {
@@ -25,6 +23,12 @@ public class RegUserInfo {
 		this.advContact = advContact;
 		this.advQuestion = advQuestion;
 		this.advAns = advAns;
+	}
+	public RegUserInfo() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getAdvName() {
+		return advName;
 	}
 	/**
 	 * @param advName the advName to set

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Ads_publisher</display-name>
- 
   <servlet>
-  			<servlet-name>Register</servlet-name>
-  			<servlet-class>com.model.AdvertiserPanel.Register</servlet-class>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>com.controller.Register</servlet-class>
   </servlet>
   <servlet-mapping>
-  					<servlet-name>Register</servlet-name>
-  					<url-pattern>/register</url-pattern>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateAdvertiser</servlet-name>
+    <servlet-class>com.controller.CreateAdvertiser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateAdvertiser</servlet-name>
+    <url-pattern>/Advertiser</url-pattern>
   </servlet-mapping>
 </web-app>
