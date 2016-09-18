@@ -3,7 +3,7 @@
   <display-name>Ads_publisher</display-name>
   <servlet>
     <servlet-name>Register</servlet-name>
-    <servlet-class>com.controller.Register</servlet-class>
+    <servlet-class>com.controler.Register</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Register</servlet-name>
@@ -11,7 +11,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>CreateAdvertiser</servlet-name>
-    <servlet-class>com.controller.CreateAdvertiser</servlet-class>
+    <servlet-class>com.controler.CreateAdvertiser</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CreateAdvertiser</servlet-name>

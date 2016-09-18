@@ -37,18 +37,18 @@
 <SCRIPT language="JavaScript">
   	function validate()
   	{
-	  	if(document.frm.userid.value==""||document.frm.password.value=="")
+	  	if(document.frm.name.value==""||document.frm.password.value=="")
 		{
   			alert("UserName or Password cannot be blank!!");
 			return;
   		}
-  	  	document.frm.action="ValidateClient";
+  	  	document.frm.action="Validateadvertiser";
   		document.frm.submit();
   	}
   	</script>
 <div class="loginForm">
 <h1 class="formheading">Advertiser Panel</h1>
-<form action="">
+<form name="frm" action="" method="post" >
 <table >
 
 <tr  ><td>UserID:</td><td><input type="text" name="name" placeholder="EMAILID" size="30"></td></tr>
@@ -56,7 +56,7 @@
 <tr><td colspan="2" style="text-align:center"><input class="sub" type="button" value="LOGIN" onclick="validate();"></td></tr>
 </table>
 <a href="Registration.html">New User</a><br>
-<a href="Forgetpassword.html">Forget Password</a>
+<a href="ForgetPassword.html">Forget Password</a>
 </form>
 </div>
 

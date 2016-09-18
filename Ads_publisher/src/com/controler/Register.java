@@ -1,4 +1,4 @@
-package com.controller;
+package com.controler;
 
 import java.io.IOException;
 
@@ -35,7 +35,7 @@ public class Register extends HttpServlet {
 		
 		String advId = request.getParameter("Id");
 		String  advName= request.getParameter("Name");
-		String advPassword=request.getParameter("Password");
+		String advPassword=request.getParameter("password");
 		String advAdd= request.getParameter("Address");
 		String advQuestion = request.getParameter("Question");
 		String advAns=request.getParameter("Answer");
@@ -48,7 +48,7 @@ public class Register extends HttpServlet {
 		if(DbManger.registerAdvertiser(info))
 		{
 			System.out.println("sucessfully ");
-			RequestDispatcher rd=request.getRequestDispatcher("AdvLogin.html");
+			RequestDispatcher rd=request.getRequestDispatcher("AdvLogin.jsp");
 	   		rd.forward(request,response);
 		}
 	
