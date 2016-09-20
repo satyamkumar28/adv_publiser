@@ -125,19 +125,19 @@ public static boolean uploadImage(CreateAdvInfo info) {
 	
 	ps.setString(1, info.getAdvUser());
     ps.setString(2, "1");
-    if (inputStream != null) {
+    
         // fetches input stream of the upload file for the blob column
         ps.setBlob(3, inputStream);
-    }
+ 
    // ps.setString(3, info.getAdvTitle());
     ps.setString(5, info.getAdvDescription());
-    if (inputStream != null) {
+    
         // fetches input stream of the upload file for the blob column
         ps.setBlob(6, inputStream);
         ps.setBlob(7, inputStream);
         ps.setBlob(8, inputStream);
         ps.setBlob(9, inputStream);
-    }
+  
    /* ps.setString(6, info.getAdvImage1());
     ps.setString(7, info.getAdvImage2());
     ps.setString(8, info.getAdvImage3());
