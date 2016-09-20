@@ -4,57 +4,113 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="styleSheet" type="text/css" href="css\Style1.css">
 <title>Insert title here</title>
 </head>
 <body>
-<div class="">
-	<h1>Advertise</h1>
-	<form action="Advertiser" method="post" enctype="multipart/form-data">
+<SCRIPT language="JavaScript">
+function validate()
+{
+  	
+        if(document.frm.userid.value=="")
+	{
+		alert("email id!!");
+		return;
+ 	}
+  	if(document.frm.title.value=="")
+	{
+		alert("invalid title!!");
+		return;
+ 	}
 	
-	<div class="adv">
+	
+	if(document.frm.category.value=="")
+	{
+		alert("INVALID category !!");
+		return;
+ 	}
+  	if(document.frm.subcategory.value=="");
+		alert("INVALID subcategory. !!");
+		return;
+ 	}
+  	if(document.frm.select.value=="Select any")
+	{
+		alert("Select  any one !!");
+		return;
+ 	}
+  	
+
+  	  	
+  		document.frm.submit();
+}
+</SCRIPT>
+
+<div class="adv">
+<h1>Advertise</h1>
+<form action="CreateAds" enctype="multipart/form-data" method="post" name="frm">
+
 		<table>
-				<tr>
-					<td>User Id</td>
-					<td><input type="text" name="userid" placeholder="Email ID*" size="30"></td>
-				</tr>
+				
 				<tr>
 					<td>Title:</td>
 					<td><input type="text" name="title" placeholder="Advertiser Name" size="30"></td>
 				</tr>
 				<tr>
 					<td>ThemeImage:</td>
-					<td><input type="file" name="image"  size="30"></td>
+					<td><input type="file" name="image"  size="15"></td>
 				</tr>
 				<tr>
 					<td>Description:</td>
-					<td><textarea rows="10" cols="30" name="description" placeholder="Description.........."></textarea></td>
+					<td><textarea rows="5" cols="25" name="description" placeholder="Description.........." ></textarea></td>
 				</tr>
 				<tr>
 					<td>Image:</td>
-					<td><input type="file" name="image1"><br>
-					<input type="file" name="image2"><br>
-					<input type="file" name="image3"></td>
+					<td><input type="file" name="image1" size="15"><br><br>
+					<input type="file" name="image2" size="15"><br><br>
+					<input type="file" name="image3" size="15"></td>
 				</tr>
 				<tr>
 					<td>Video:</td>
-					<td><input type="file" name="video"></td>
+					<td><input type="file" name="video" size="15"></td>
 				</tr>
-				<tr>
-					<td>Category:</td>
-					<td><input type="text" name="category" size="30"></td>
-				</tr>
-				<tr>
-					<td>SubCategory:</td>
-					<td><input type="text" name="subcategory" size="30"></td>
-				</tr>
+				
+					<%
+		ArrayList<AdInfo> info = new ArrayList<AdInfo>();
+	 info =DBmanager.getCategories();%>
+<tr>
+	<td>Category:</td>
+	<td ><select name="category" >
+	<% for(int i=0; i<info.size();i++){
+	String cat=info.get(i).getCategory().toString();
+	%>		 
+<option size="30" value="<%=cat%>"><%=cat%> </option>
+<%} %>
+</select>
+</td>
+</tr>
+					<%
+		ArrayList<AdInfo> info1 = new ArrayList<AdInfo>();
+	 info1 =DBmanager.getSubCategories();%>
+<tr>
+	<td>SubCategory:</td>
+	<td ><select name="subcategory" >
+	<% for(int i=0; i<info1.size();i++){
+	String subcat=info1.get(i).getSubcategory().toString();
+	%>		 
+<option value="<%=subcat%>"><%=subcat%> </option>
+<%} %>
+</select>
+</td>
+</tr>
+		
 				<tr>
 					<td>Type Add</td>
 					<td>
-						<select>
-								<option name="select">--select Advertiser--</option>
+
+						<select name="priority" >
 								<option value="5">Free Add</option>
 								<option value="4">Sponsored Add</option>
-								<option value="3">Bucket Add</option>
+								<option value="3">Bucket Add</option> 
 						</select>
 					</td>
 				</tr>
@@ -66,7 +122,7 @@
 		</table>
 		
 	</div>
-	</form>
+</form>
 
 </body>
 </html>

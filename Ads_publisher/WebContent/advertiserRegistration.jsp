@@ -53,7 +53,7 @@ function validate()
 		return;
  	}
 
-  	  	document.frm.action="advertiserRegister";
+  	  	
   		document.frm.submit();
 }
 </SCRIPT>
@@ -63,9 +63,9 @@ function validate()
 <table>
 <tr><td>NAME:</td><td><input type="text" name="Name" placeholder="Advertiser Name" size="30"></td></tr>
 <tr><td>ADVERSITER ID:</td><td><input type="text" name="Id" placeholder="EMAIL ID" size="30"></td></tr>
-<tr><td>PASSWORD:</td><td><input type="password" name="*********" placeholder="PASSWORD" size="30"></td></tr>
+<tr><td>PASSWORD:</td><td><input type="password" name="password" placeholder="*********" size="30"></td></tr>
 <tr><td>Confirm Password</td>
-                <td><input type="confirmpassword" placeholder="CONFIRMPASSWORD" name="confirmpassword"></td>
+                <td><input type="password" name="confirmpassword" placeholder="CONFIRMPASSWORD" name="confirmpassword" size="30"></td>
             </tr>
 <tr><td>ADDRESS:</td><td><input type="text" name="Address" placeholder="ADDRESS" size="30"></td></tr>
 <tr><td>CONTACT:</td><td><input type="text" name="Phone" placeholder="+91 OR 0 NOT USED" size="30"></td></tr>

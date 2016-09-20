@@ -1,0 +1,209 @@
+@CHARSET "ISO-8859-1";
+
+
+#greeting
+{
+	width: 970px;
+	height: 100px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+		
+}
+
+#images
+{
+	width: 970px;
+	height: 300px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+		
+}
+
+#image
+{
+	float:left;
+	width: 190px;
+	height: 250px;
+	margin: 0px auto;
+	background: gray;
+	display: inline;
+	text-align: center;
+}
+
+#popup
+{
+	width: 970px;
+	height: 300px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+		
+}
+
+#popupl
+{
+	float:left;
+	width: 300px;
+	height: 250px;
+	margin: 0px auto;
+	display: inline;
+	text-align: center;
+	
+}
+
+#popupr
+{
+	float:left;
+	width: 620px;
+	height: 250px;
+	margin: 0px auto;
+	display: inline;
+	text-align: center;
+	
+}
+
+#ads
+{
+	width: 970px;
+	height: 100px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+}
+
+#ad
+{
+	float:left;
+	width: 100px;
+	height: 100px;
+	margin: 0px auto;
+	background: gray;
+	display: inline;
+	text-align: center;
+}
+
+
+#ewallet
+{
+	width: 970px;
+	height: 100px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+	
+}
+
+#ewallet1
+{
+	float:left;
+	width: 700px;
+	height: 100px;
+	margin: 0px auto;
+	background: gray;
+	display: inline;
+	text-align: center;
+}
+
+#ewallet2
+{
+	float: right;
+	width: 220px;
+	height: 100px;
+	margin: 0px auto;
+	background: aqua;
+	display: inline;
+	text-align: center;
+}
+
+#product
+{
+	width: 970px;
+	height: 150px;
+	margin: 0px auto;
+	
+	border: solid;
+	
+}
+
+#product1
+{
+	width: 970px;
+	height: 50px;
+	margin: 0px auto;
+	display: inline-block;
+	background: red;
+}
+
+#product2
+{
+	float:left;
+	width: 700px;
+	height: 100px;
+	margin: 0px auto;
+	background: gray;
+	display: inline;
+	text-align: center;
+}
+
+#product3
+{
+	float: right;
+	width: 220px;
+	height: 100px;
+	margin: 0px auto;
+	background: aqua;
+	display: inline;
+	text-align: center;
+}
+
+
+
+
+#profile
+{
+	width: 970px;
+	height: 170px;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border: solid;
+}
+
+
+
+
+.navigation {
+  width: 300px;
+}
+
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainmenu a {
+  display: block;
+ text-decoration: none;
+ padding: 10px;
+ colour: #000;
+}
+
+.mainmenu a:hover {
+    background-colour: #C5C5C5;
+}
+
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+
+  .submenu a {
+  background-color: #999;
+}
+
+  .submenu {
+  overflow: hidden;max-height: 0;
+}
+
