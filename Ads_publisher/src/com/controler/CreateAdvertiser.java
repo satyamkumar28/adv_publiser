@@ -49,64 +49,9 @@ public class CreateAdvertiser extends HttpServlet {
 		String advCategory=request.getParameter("category");
 		String advSubCategory=request.getParameter("subcategory");
 		String advPriorty=request.getParameter("priorty");
-		//String advApprove="No";
 		
-	//	String firstName = request.getParameter("firstName");
-	   //     String lastName = request.getParameter("lastName");
-	         
-	        InputStream inputStream = null; // input stream of the upload file
-	         
-	        // obtains the upload file part in this multipart request
-	        Part filePart = request.getPart("image");
-	        if (filePart != null) {
-	            // prints out some information for debugging
-	            System.out.println(filePart.getName());
-	            System.out.println(filePart.getSize());
-	            System.out.println(filePart.getContentType());
-	             
-	            // obtains input stream of the upload file
-	            inputStream = filePart.getInputStream();
-	        }
-	        Part filePart1 = request.getPart("image1");
-	        if (filePart1 != null) {
-	            // prints out some information for debugging
-	            System.out.println(filePart1.getName());
-	            System.out.println(filePart1.getSize());
-	            System.out.println(filePart1.getContentType());
-	             
-	            // obtains input stream of the upload file
-	            inputStream = filePart1.getInputStream();
-	        }
-	        Part filePart2 = request.getPart("image2");
-	        if (filePart2 != null) {
-	            // prints out some information for debugging
-	            System.out.println(filePart2.getName());
-	            System.out.println(filePart2.getSize());
-	            System.out.println(filePart2.getContentType());
-	             
-	            // obtains input stream of the upload file
-	            inputStream = filePart2.getInputStream();
-	        }
-	        Part filePart3 = request.getPart("image3");
-	        if (filePart3 != null) {
-	            // prints out some information for debugging
-	            System.out.println(filePart3.getName());
-	            System.out.println(filePart3.getSize());
-	            System.out.println(filePart3.getContentType());
-	             
-	            // obtains input stream of the upload file
-	            inputStream = filePart3.getInputStream();
-	        }
-	        Part filePart4 = request.getPart("video");
-	        if (filePart4 != null) {
-	            // prints out some information for debugging
-	            System.out.println(filePart4.getName());
-	            System.out.println(filePart4.getSize());
-	            System.out.println(filePart4.getContentType());
-	             
-	            // obtains input stream of the upload file
-	            inputStream = filePart4.getInputStream();
-	        }
+		
+	        
 		CreateAdvInfo createInfo=new CreateAdvInfo(advUser, advTitle, advTheme, advDescription, advImage1, advImage2, advImage3, advVideo, advCategory, advSubCategory, advPriorty);
 		if(DbManger.uploadImage(createInfo))
 		{

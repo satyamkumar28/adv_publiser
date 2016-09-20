@@ -15,7 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.database.DBmanager;
+import com.database.DbManger;
 import com.model.CustInfo;
+import com.model.RegUserInfo;
 
 /**
  * Servlet implementation class advPassword
@@ -51,21 +53,21 @@ public class advPassword extends HttpServlet {
 		ResultSet rs=null;
 		
 		String password=request.getParameter("newpassword");
-		CustInfo info=(CustInfo)session.getAttribute("info");
+		RegUserInfo info=(RegUserInfo)session.getAttribute("info");
 		String id=info.getId();
 		int flag=0;
 		out.println(password+"     "+id);
 	try
 	{       
 		RequestDispatcher rd=null;
-        con=DBmanager.getconnection();
-		PreparedStatement stat= con.prepareStatement("Update advertiserDetails set password='"+password+"' where advertiserid='"+id+"'");
+        con=DbManger.getconnection();
+		PreparedStatement stat= con.prepareStatement("Update adsusers set password='"+password+"' where userid='"+id+"'");
 		flag=stat.executeUpdate();
 		
 		if(flag==1)
 		{
 			out.println("    <SCRIPT type='text/javascript'  language='JavaScript'>window.alert('Password Updated ! ');</SCRIPT>");
-		    rd=request.getRequestDispatcher("AdvtLogin.jsp");
+		    rd=request.getRequestDispatcher("ClientLogin.jsp");
 		}
 		else
 		{
@@ -84,6 +86,6 @@ public class advPassword extends HttpServlet {
 		
 		
 	}
-	}
+}
 
 
