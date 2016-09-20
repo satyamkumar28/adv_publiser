@@ -25,8 +25,8 @@ public class DBmanager {
     
     public static String DBDRIVER = "oracle.jdbc.OracleDriver";
 	public static String DBURL = "jdbc:oracle:thin:@localhost:1521:xe";
-	public static String DBUSER = "akhilesh";
-	public static String DBPASSWORD = "machine187";
+	public static String DBUSER = "system";
+	public static String DBPASSWORD = "system";
 
 	static {
 		try {
@@ -103,8 +103,8 @@ public static boolean loginUser(String userName, String password){
         try
         {
             String url="jdbc:oracle:thin:@localhost:1521:XE";
-            String user="akhilesh";
-            String password="machine187";
+            String user="system";
+            String password="system";
             Class.forName("oracle.jdbc.driver.OracleDriver");
             con=DriverManager.getConnection(url,user,password);
         }
